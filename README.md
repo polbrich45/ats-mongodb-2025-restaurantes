@@ -40,17 +40,28 @@ Consulta la documentación completa en los siguientes archivos dentro del direct
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/ats-mongodb-2025-restaurantes.git
+   git clone https://github.com/albertgilopez/ats-mongodb-2025-restaurantes.git
    cd ats-mongodb-2025-restaurantes
    ```
 2. Importa los datos en MongoDB:
-   ```bash
-   mongoimport --db restaurant_db --collection restaurants --file datasets/restaurants.json --jsonArray
-   mongoimport --db restaurant_db --collection inspections --file datasets/inspections.json --jsonArray
-   ```
+
+En localhost:
+
+```bash
+mongoimport --db restaurant_db --collection restaurants --file datasets/restaurants.json --jsonArray
+mongoimport --db restaurant_db --collection inspections --file datasets/inspections.json --jsonArray
+```
+
+En MongoDB Atlas:
+
+```bash
+mongoimport --uri "mongodb+srv://usuario:contraseña@cluster.mongodb.net/restaurant_db" \
+--collection restaurants --file restaurants.json --jsonArray
+mongoimport --uri "mongodb+srv://usuario:contraseña@cluster.mongodb.net/restaurant_db" \
+--collection inspections --file inspections.json --jsonArray
+```
 
 **O utilizar el proceso de importacion de datos desde MongoDB Compass**.
-
 
 ## Contacto
 
