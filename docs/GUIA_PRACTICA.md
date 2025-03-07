@@ -37,9 +37,20 @@ Si aún no tienes MongoDB instalado:
 
 Para importar los datos a MongoDB, puedes utilizar los siguientes comandos:
 
+En localhost:
+
 ```bash
 mongoimport --db restaurant_db --collection restaurants --file datasets/restaurants.json --jsonArray
 mongoimport --db restaurant_db --collection inspections --file datasets/inspections.json --jsonArray
+```
+
+En MongoDB Atlas:
+
+```bash
+mongoimport --uri "mongodb+srv://usuario:contraseña@cluster.mongodb.net/restaurant_db" \
+--collection restaurants --file restaurants.json --jsonArray
+mongoimport --uri "mongodb+srv://usuario:contraseña@cluster.mongodb.net/restaurant_db" \
+--collection inspections --file inspections.json --jsonArray
 ```
 
 **O utilizar el proceso de importacion de datos desde MongoDB Compass**.

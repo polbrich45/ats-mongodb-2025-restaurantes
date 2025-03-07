@@ -7,7 +7,7 @@
 - Haz un fork de este repositorio a tu cuenta personal de GitHub.
 - Clona tu fork a tu máquina local:
   ```bash
-  git clone https://github.com/TU_USUARIO/ats-mongodb-2025-restaurantes.git
+  git clone https://github.com/albertgilopez/ats-mongodb-2025-restaurantes.git
   cd ats-mongodb-2025-restaurantes
   ```
 
